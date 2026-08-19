@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://people.irisa.fr/Matthieu.Branthome/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://people.irisa.fr/Matthieu.Branthome/cv.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://people.irisa.fr/Matthieu.Branthome/research.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://people.irisa.fr/Matthieu.Branthome/publications.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://people.irisa.fr/Matthieu.Branthome/software.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://people.irisa.fr/Matthieu.Branthome/teaching.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>

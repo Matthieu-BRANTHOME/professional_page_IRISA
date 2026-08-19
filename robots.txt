@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://people.irisa.fr/Matthieu.Branthome/sitemap.xml
