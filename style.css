@@ -13,7 +13,7 @@
   --rule:       #e2e5e9;
   --bg:         #ffffff;
   --bg-soft:    #f6f7f9;
-  --maxw:       46rem;
+  --maxw:       54rem;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -63,7 +63,7 @@ a:focus-visible {
 .identity { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
 
 .identity img {
-  width: 84px; height: 84px;
+  width: 132px; height: 132px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--bg-soft);
@@ -341,7 +341,7 @@ table.courses th:last-child {
 
 @media (max-width: 34rem) {
   body { font-size: 16px; }
-  .identity img { width: 68px; height: 68px; }
+  .identity img { width: 104px; height: 104px; }
   .identity h1 { font-size: 1.35rem; }
   .news li { grid-template-columns: 1fr; gap: 0.1rem; }
   .contact { grid-template-columns: 1fr; gap: 0 0; }
@@ -356,4 +356,166 @@ table.courses th:last-child {
   nav.site-nav, .site-footer { display: none; }
   body { font-size: 11pt; }
   a { color: var(--ink); border-bottom: 0; }
+}
+
+/* ---------- Screenshots / figures ---------- */
+
+figure.screenshot {
+  margin: 0 0 1.5rem;
+}
+
+figure.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--bg-soft);
+}
+
+figure.screenshot figcaption {
+  margin-top: 0.5rem;
+  color: var(--ink-faint);
+  font-size: 0.87rem;
+}
+
+@media (max-width: 34rem) {
+  table.courses td:nth-child(2),
+  table.courses th:nth-child(2) { white-space: normal; }
+}
+
+/* ---------- Research interests (plain text, not controls) ---------- */
+
+ul.interests {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.55rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  color: var(--ink-soft);
+}
+
+ul.interests li:not(:last-child)::after {
+  content: "·";
+  color: var(--ink-faint);
+  margin-left: 0.55rem;
+}
+
+/* ---------- Collapsible older news ---------- */
+
+details.news-more { border-top: 1px solid var(--rule); }
+
+details.news-more > summary {
+  cursor: pointer;
+  padding: 0.75rem 0;
+  font-size: 0.92rem;
+  color: var(--accent);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+details.news-more > summary::-webkit-details-marker { display: none; }
+
+details.news-more > summary::before {
+  content: "\25B8";
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+details.news-more[open] > summary::before { content: "\25BE"; }
+
+details.news-more > summary:hover { color: var(--accent-dk); }
+
+details.news-more > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+details.news-more > .news { border-top: 1px solid var(--rule); }
+
+/* ---------- Affiliation lines with icons ---------- */
+
+.identity .role .aff {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.identity .role .aff::before {
+  content: "";
+  flex: none;
+  width: 1.05em;
+  height: 1.05em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.identity .role .aff.research::before {
+  background-image: url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%234a5158'%20stroke-width='1.8'%20stroke-linecap='round'%20stroke-linejoin='round'><path%20d='M9%203h6'/><path%20d='M10%203v6.5L4.6%2018.2A2%202%200%200%200%206.3%2021h11.4a2%202%200%200%200%201.7-2.8L14%209.5V3'/><path%20d='M7.5%2015.5h9'/></svg>");
+}
+
+.identity .role .aff.teaching::before {
+  background-image: url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%234a5158'%20stroke-width='1.8'%20stroke-linecap='round'%20stroke-linejoin='round'><path%20d='M12%204%202%208.5%2012%2013l10-4.5L12%204Z'/><path%20d='M6%2010.5V16c0%201.7%202.7%203%206%203s6-1.3%206-3v-5.5'/><path%20d='M22%208.5V14'/></svg>");
+}
+
+/* ---------- Justified running text ---------- */
+
+main section > p,
+.entry > p:not(.where) {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@media (max-width: 34rem) {
+  main section > p,
+  .entry > p:not(.where) { text-align: left; }
+}
+
+/* ---------- Teaching responsibilities ---------- */
+
+.entry h4.resp-title {
+  font-size: 0.95rem;
+  margin: 1.15rem 0 0.4rem;
+  color: var(--ink);
+}
+
+ul.plain.resp { margin-bottom: 0; }
+
+ul.plain.resp > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+ul.plain.resp .when {
+  color: var(--ink-faint);
+  font-size: 0.87rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.contact dd.mails > span { color: var(--ink-faint); margin: 0 0.2rem; }
+
+/* ---------- Course tables: same column grid on every table ---------- */
+
+table.courses { table-layout: fixed; }
+
+table.courses th:nth-child(2),
+table.courses td:nth-child(2) { width: 11.5rem; }
+
+table.courses th:nth-child(3),
+table.courses td:nth-child(3) { width: 8rem; }
+
+@media (max-width: 34rem) {
+  table.courses th:nth-child(2),
+  table.courses td:nth-child(2) { width: 7.5rem; }
+  table.courses th:nth-child(3),
+  table.courses td:nth-child(3) { width: 5.5rem; }
 }
