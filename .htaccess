@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------------------
+# Politique de cache de la page personnelle.
+#
+# "no-cache" ne veut pas dire « ne pas mettre en cache » : cela veut dire
+# « ne jamais servir la copie locale sans avoir demandé au serveur si elle est
+# encore à jour ». Le navigateur interroge donc le serveur à chaque visite ;
+# si le fichier n'a pas bougé, le serveur répond 304 Not Modified et rien
+# n'est retéléchargé. On a donc la fraîcheur sans le coût.
+#
+# En cas de problème (erreur 500 sur le site), supprimer ce fichier :
+#   curl -u mbrantho -X DELETE https://webdav.irisa.fr/people/htdocs/mbrantho/.htaccess
+# ---------------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+  Header set Cache-Control "no-cache, must-revalidate"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 0 seconds"
+</IfModule>

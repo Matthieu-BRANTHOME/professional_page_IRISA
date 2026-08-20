@@ -13,6 +13,5 @@
 # Local deployment notes (kept out of the public repository)
 LISEZ-MOI_deploiement.md
 
-# WebDAV access control files — never commit these
+# WebDAV password file — never commit this
 .htpasswd
-.htaccess
