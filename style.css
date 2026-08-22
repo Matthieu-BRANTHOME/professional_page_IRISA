@@ -610,3 +610,19 @@ ol.pubs.j > li::before { content: "[J" counter(pub) "]"; }
 ol.pubs.c > li::before { content: "[C" counter(pub) "]"; }
 ol.pubs.w > li::before { content: "[W" counter(pub) "]"; }
 ol.pubs.t > li::before { content: "[T" counter(pub) "]"; }
+
+/* ---------- Venue ranking badge ---------- */
+
+.rank {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.05rem 0.4rem;
+  vertical-align: 0.08em;
+  white-space: nowrap;
+}
