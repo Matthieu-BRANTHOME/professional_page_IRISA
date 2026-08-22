@@ -533,7 +533,7 @@ table.courses td:nth-child(3) { width: 8rem; }
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   margin: 0 0 0 auto;
   padding: 0;
 }
@@ -551,7 +551,7 @@ table.courses td:nth-child(3) { width: 8rem; }
 
 .identity .logos img {
   display: block;
-  height: 27px;
+  height: 40px;
   width: auto;
   object-fit: contain;
   border-radius: 0;
@@ -559,138 +559,12 @@ table.courses td:nth-child(3) { width: 8rem; }
 }
 
 /* marque compacte : légèrement réduite pour équilibrer le poids visuel */
-.identity .logos img.mark { height: 24px; }
+.identity .logos img.mark { height: 36px; }
 
 @media (max-width: 52rem) {
   .identity .logos {
     flex-direction: row;
     align-items: center;
-    margin: 0.4rem 0 0;
-    gap: 1.5rem;
-    width: 100%;
-  }
-  .identity .logos img { height: 27px; }
-  .identity .logos img.mark { height: 24px; }
-}
-
-/* ---------- Affiliation lines with icons ---------- */
-
-.identity .role .aff {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.identity .role .aff::before {
-  content: "";
-  flex: none;
-  width: 1.05em;
-  height: 1.05em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.identity .role .aff.research::before {
-  background-image: url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%234a5158'%20stroke-width='1.8'%20stroke-linecap='round'%20stroke-linejoin='round'><path%20d='M9%203h6'/><path%20d='M10%203v6.5L4.6%2018.2A2%202%200%200%200%206.3%2021h11.4a2%202%200%200%200%201.7-2.8L14%209.5V3'/><path%20d='M7.5%2015.5h9'/></svg>");
-}
-
-.identity .role .aff.teaching::before {
-  background-image: url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%234a5158'%20stroke-width='1.8'%20stroke-linecap='round'%20stroke-linejoin='round'><path%20d='M12%204%202%208.5%2012%2013l10-4.5L12%204Z'/><path%20d='M6%2010.5V16c0%201.7%202.7%203%206%203s6-1.3%206-3v-5.5'/><path%20d='M22%208.5V14'/></svg>");
-}
-
-/* ---------- Justified running text ---------- */
-
-main section > p,
-.entry > p:not(.where) {
-  text-align: justify;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-}
-
-@media (max-width: 34rem) {
-  main section > p,
-  .entry > p:not(.where) { text-align: left; }
-}
-
-/* ---------- Teaching responsibilities ---------- */
-
-.entry h3.resp-title {
-  font-size: 17px;
-  margin: 1.15rem 0 0.4rem;
-}
-
-ul.plain.resp { margin-bottom: 0; }
-
-ul.plain.resp > li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-}
-
-ul.plain.resp .when {
-  color: var(--ink-faint);
-  font-size: 0.87rem;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-.contact dd.mails > span:not(.mail) { color: var(--ink-faint); margin: 0 0.2rem; }
-
-/* ---------- Course tables: same column grid on every table ---------- */
-
-table.courses { table-layout: fixed; }
-
-table.courses th:nth-child(2),
-table.courses td:nth-child(2) { width: 11.5rem; }
-
-table.courses th:nth-child(3),
-table.courses td:nth-child(3) { width: 8rem; }
-
-@media (max-width: 34rem) {
-  table.courses th:nth-child(2),
-  table.courses td:nth-child(2) { width: 7.5rem; }
-  table.courses th:nth-child(3),
-  table.courses td:nth-child(3) { width: 5.5rem; }
-}
-
-/* ---------- Institutional logos in the header ---------- */
-
-.identity .logos {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin: 0 0 0 auto;
-  padding: 0;
-}
-
-.identity .logos li { flex: none; }
-
-.identity .logos a {
-  display: block;
-  border-bottom: 0;
-  opacity: 0.85;
-  transition: opacity 0.15s ease;
-}
-
-.identity .logos a:hover { opacity: 1; }
-
-.identity .logos img {
-  display: block;
-  height: 30px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 0;
-  background: none;
-}
-
-/* marque compacte : légèrement réduite pour équilibrer le poids visuel */
-.identity .logos img.mark { height: 27px; }
-
-@media (max-width: 52rem) {
-  .identity .logos {
     margin: 0.4rem 0 0;
     gap: 1.5rem;
     width: 100%;
