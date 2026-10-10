@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Matthieu Branthôme — personal research page
+   Matthieu Branthôme – personal research page
    Single stylesheet shared by every page.
    No external dependencies: works offline and on a static WebDAV space.
    ------------------------------------------------------------------ */
@@ -235,6 +235,10 @@ ol.pubs > li::before {
 
 .entry-head h3 { margin: 0; color: var(--ink); font-size: 17px; }
 
+.entry-head h3 .h-plain { font-weight: 400; }
+
+.entry-head h3 .h-note { font-weight: 400; color: var(--ink-soft); }
+
 .entry-head .when {
   color: var(--ink-faint);
   font-size: 0.87rem;
@@ -286,6 +290,8 @@ table.courses td:last-child {
   color: var(--ink-soft);
   font-variant-numeric: tabular-nums;
 }
+
+.legend { margin: 1rem 0 0; color: var(--ink-faint); font-size: 13.9px; }
 
 /* ---------- Callout box ---------- */
 
